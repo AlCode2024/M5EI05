@@ -20,7 +20,7 @@ class Usuario(
 class ListaUsuarios {
     private val usuarios = mutableListOf<Usuario>()
 
-    // Cargar usuarios por defecto (jugadores de Colo Colo)
+    // Cargar usuarios por defecto
     init {
         usuarios.add(Usuario("Arturo Vidal", 36, "Futbolista", "Marcelo Barticciotto"))
         usuarios.add(Usuario("Esteban Paredes", 43, "Entrenador", "Héctor Tapia"))
