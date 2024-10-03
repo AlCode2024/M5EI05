@@ -27,6 +27,12 @@ Esta clase contiene una lista de objetos `Usuario` y proporciona las funciones p
 
 La función **`mostrarUsuariosPorEdad(minEdad: Int)`** Filtra los usuarios y muestran los que cumplen con la condicion de tener una edad mayor o igual a la ingresada en la consulta.
 
+`Filter` es un método que se puede aplicar a colecciones (listas, arrays, etc.) para seleccionar solo los elementos que cumplen con una condición. En otras palabras, crea una nueva lista a partir de la original, pero solo con los elementos que pasen un "filtro" que le damos como parámetro.
+
+usuarios.filter { it.edad >= minEdad }
+
+A la lista usuarios le agregamos el metodo filter ( usuarios.filter) y declaramos la condición que deben cumplir ({ it.edad >= minEdad }).
+
 ```kotlin
 fun mostrarUsuariosPorEdad(minEdad: Int) {
     val usuariosFiltrados = usuarios.filter { it.edad >= minEdad }.sortedBy { it.edad }
@@ -39,3 +45,5 @@ fun mostrarUsuariosPorEdad(minEdad: Int) {
         println("No hay usuarios con edad igual o mayor a $minEdad años.")
     }
 }
+
+
